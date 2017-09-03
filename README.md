@@ -13,9 +13,7 @@ This script download all fastq files associated with a project. I found out that
 This script handles that situation by ignoring already downloaded fastq files, so if donwload terminate prematurally, simply run it again.
 
 # Usage
-1. Go to this link and follow the instructions to get you access credentials including Client Id, Client Secret, and Access Token (Illumina's python script is also there):
-
-https://help.basespace.illumina.com/articles/tutorials/using-the-python-run-downloader/
+1. Go to this link and follow the instructions to get you access credentials including Client Id, Client Secret, and Access Token (Illumina's python script is also there): https://help.basespace.illumina.com/articles/tutorials/using-the-python-run-downloader/
 
 2. Create a file called `.basespacepy.cfg` in your home directory with the following content:
 
@@ -28,9 +26,11 @@ apiServer = https://api.basespace.illumina.com/
 apiVersion = v1pre3
 ``` 
 
-3. Install BaseSpacePy (seems to be python 2 only): https://github.com/basespace/basespace-python-sdk
+3. Protect that file by `chmod 600 ~/.basespacepy.cfg`
 
-4. Create a directory where you want to put your fastq files, and run:
+4. Install BaseSpacePy (seems to be python 2 only): https://github.com/basespace/basespace-python-sdk
+
+5. Create a directory where you want to put your fastq files, and run:
 
 ```
 python download_fq_from_basespace.py your_project_name
