@@ -6,11 +6,11 @@ If using walk up service, the sequencing data won't go through Sanger pipeline. 
 
 Illumina has a python script for downloading data, but it won't give you fastq files. You can download fastq files following this instruction https://gist.github.com/lh3/54f535b11a9ee5d3be8e but you have to do it one by one.
 
-This script download all fastq files associated with a project. I found out that when you have many files in a project, the download often stops randomly, and gives you a following error message:
+This script download all fastq files associated with a project. I found out that when you have many files in a project, the download often stops randomly, and gives you an error message like this:
 
 `ssl.SSLError: ('The read operation timed out',)`
 
-This script handles that situation by ignoring already downloaded fastq files, so if donwload terminate prematurally, simply run it again.
+This script handles that situation by ignoring already downloaded fastq files, so if donwload terminates prematurally, simply run it again.
 
 # Usage
 1. Go to this link and follow the instructions to get you access credentials including Client Id, Client Secret, and Access Token (Illumina's python script is also there): https://help.basespace.illumina.com/articles/tutorials/using-the-python-run-downloader/
@@ -24,7 +24,7 @@ clientSecret = your_Client_Secret
 accessToken = your_Access_Token
 apiServer = https://api.basespace.illumina.com/
 apiVersion = v1pre3
-``` 
+```
 
 3. Protect that file by `chmod 600 ~/.basespacepy.cfg`
 
