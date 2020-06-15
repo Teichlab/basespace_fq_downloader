@@ -10,7 +10,7 @@ This script download all fastq files associated with a project. I found out that
 
 `ssl.SSLError: ('The read operation timed out',)`
 
-This script handles that situation by ignoring already downloaded fastq files, so if donwload terminates prematurally, simply run it again.
+This script handles that situation by ignoring already downloaded fastq files, so if download terminates prematurally, simply run it again.
 
 # Usage
 1. Go to this link and follow the instructions to get you access credentials including Client Id, Client Secret, and Access Token (Illumina's python script is also there): https://help.basespace.illumina.com/articles/tutorials/using-the-python-run-downloader/
